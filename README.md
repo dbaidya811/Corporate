@@ -99,5 +99,5 @@ This template is free to use for both personal and commercial projects.
 ## Contact
 
 For any questions or customization requests, please contact:
-- Email: info@corporatename.com
-- Phone: +1 (555) 123-4567
+- Email: dbaidya811@gmail.com
+- Phone: +91 97485 03521
