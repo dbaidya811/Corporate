@@ -100,4 +100,4 @@ This template is free to use for both personal and commercial projects.
 
 For any questions or customization requests, please contact:
 - Email: dbaidya811@gmail.com
-- Phone: +91 97485 03521
+- Phone: +91 97XXX XXX21
