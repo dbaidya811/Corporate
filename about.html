@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Corporate Name</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="manifest" href="img/site.webmanifest">
+    <style>
+        /* Additional styles specific to About page */
+        .about-hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('img/about-hero.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+        
+        .about-content {
+            padding: 80px 0;
+        }
+        
+        .about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+        
+        .about-image img {
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-text h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-size: 2.2rem;
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-color);
+        }
+        
+        .mission-values {
+            background-color: #f9f9f9;
+            padding: 80px 0;
+        }
+        
+        .mission-values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .value-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        .team-section {
+            padding: 80px 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .team-member {
+            background-color: white;
+            border-radius: 5px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-member img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+        
+        .team-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .team-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .team-info p {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+        
+        .team-social {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .team-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 35px;
+            height: 35px;
+            background-color: #f1f1f1;
+            border-radius: 50%;
+            margin: 0 5px;
+            color: var(--primary-color);
+            transition: var(--transition);
+        }
+        
+        .team-social a:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .about-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-image {
+                order: 1;
+            }
+            
+            .about-text {
+                order: 2;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Corporate<span>Name</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Hero Section -->
+    <section class="about-hero">
+        <div class="container">
+            <h1>About Our Company</h1>
+            <p>Learn about our journey, mission, and the team behind our success</p>
+        </div>
+    </section>
+
+    <!-- About Content Section -->
+    <section class="about-content">
+        <div class="container">
+            <div class="about-section">
+                <div class="about-image">
+                    <img src="https://i.pinimg.com/736x/4e/82/44/4e82443114201cff366238e92b67aef5.jpg" alt="Our Company">
+                </div>
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2010, CorporateName has grown from a small startup to a leading provider of business solutions. Our journey began with a simple mission: to help businesses thrive in an increasingly competitive marketplace.</p>
+                    <p>Over the years, we have expanded our services and expertise, adapting to the changing business landscape and technological advancements. Today, we serve clients across various industries, providing tailored solutions that address their unique challenges.</p>
+                    <p>What sets us apart is our commitment to excellence, innovation, and client satisfaction. We believe in building long-term relationships with our clients, becoming their trusted partners in success.</p>
+                </div>
+            </div>
+            
+            <div class="about-section">
+                <div class="about-text">
+                    <h2>Our Approach</h2>
+                    <p>At CorporateName, we follow a client-centered approach that focuses on understanding your business needs and objectives. We believe that each business is unique, and therefore, requires customized solutions.</p>
+                    <p>Our process begins with a thorough analysis of your business, identifying areas of improvement and opportunities for growth. We then develop and implement strategies that align with your goals, continuously monitoring and optimizing for the best results.</p>
+                    <p>We leverage the latest technologies and industry best practices to deliver solutions that not only address your current challenges but also prepare your business for future growth.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://i.pinimg.com/736x/f8/4d/a1/f84da19e074b05e725c9d22a1cdb8dc7.jpg" alt="Our Approach">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission and Values Section -->
+    <section class="mission-values">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Mission & Values</h2>
+                <p>The principles that guide our work and define our culture</p>
+            </div>
+            
+            <div class="mission-values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Mission</h3>
+                    <p>To empower businesses with innovative solutions that drive growth, efficiency, and competitive advantage in the global marketplace.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Vision</h3>
+                    <p>To be the leading provider of business solutions, recognized for our excellence, innovation, and positive impact on our clients' success.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Integrity</h3>
+                    <p>We conduct our business with the highest standards of ethics, transparency, and accountability.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We continuously seek new ideas and approaches to deliver cutting-edge solutions to our clients.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>We believe in the power of teamwork and partnership, working closely with our clients and each other.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>We strive for excellence in everything we do, delivering the highest quality of service to our clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Leadership Team</h2>
+                <p>Meet the experts behind our success</p>
+            </div>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="https://i.pinimg.com/736x/d9/b6/1a/d9b61a74e0ca7c64d50d27bb42013b4b.jpg" alt="John Doe">
+                    <div class="team-info">
+                        <h3>John Doe</h3>
+                        <p>Chief Executive Officer</p>
+                        <div class="team-social">
+                            <a href="https://wwww.facebook.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://wwww.twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://wwww.email.com/"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://i.pinimg.com/736x/82/28/84/82288486b5da113403ded5a4f886fc63.jpg" alt="Jane Smith">
+                    <div class="team-info">
+                        <h3>Jane Smith</h3>
+                        <p>Chief Operations Officer</p>
+                        <div class="team-social">
+                            <a href="https://wwww.facebook.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://wwww.twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://wwww.email.com/"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://i.pinimg.com/736x/51/5d/b3/515db3009ca24063b9ca74d186a7c1ca.jpg" alt="Michael Johnson">
+                    <div class="team-info">
+                        <h3>Michael Johnson</h3>
+                        <p>Chief Technology Officer</p>
+                        <div class="team-social">
+                            <a href="https://wwww.facebook.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://wwww.twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://wwww.email.com/"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <img src="https://i.pinimg.com/736x/99/c2/5d/99c25d1a9fb2ed17ddb3bc095c5d5c72.jpg" alt="Sarah Williams">
+                    <div class="team-info">
+                        <h3>Sarah Williams</h3>
+                        <p>Chief Marketing Officer</p>
+                        <div class="team-social">
+                           <a href="https://wwww.facebook.com/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://wwww.twitter.com/"><i class="fab fa-twitter"></i></a>
+                            <a href="https://wwww.email.com/"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Work With Us?</h2>
+            <p>Contact us today to discuss how we can help your business grow and succeed.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>Corporate<span>Name</span></h3>
+                    <p>Professional Business Solutions</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="services.html#consulting">Business Consulting</a></li>
+                        <li><a href="services.html#marketing">Digital Marketing</a></li>
+                        <li><a href="services.html#software">Software Solutions</a></li>
+                        <li><a href="services.html#analytics">Data Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> 123 Business Avenue, City, Country</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@corporatename.com</p>
+                    <div class="social-icons">
+                         <a href="https://wwww.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://wwww.twitter.com/"><i class="fab fa-twitter"></i></a>
+                        <a href="https://wwww.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wwww.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CorporateName. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
