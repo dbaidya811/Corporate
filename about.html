@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - NexusCorp</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.9.1/dist/gsap.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="	https://cdn-icons-png.flaticon.com/512/5968/5968374.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="cube">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+                <div class="side left"></div>
+                <div class="side right"></div>
+            </div>
+        </div>
+        <div class="loading-text">Loading<span class="dots">...</span></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">NexusCorp</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>About Us</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>About</span>
+            </div>
+        </div>
+        <div id="header-canvas"></div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2>Our Story</h2>
+                    <div class="underline"></div>
+                    <p>Founded in 2015, NexusCorp began with a simple mission: to help businesses navigate the complex digital landscape with innovative solutions that drive real results.</p>
+                    <p>What started as a small team of passionate developers has grown into a full-service digital agency with expertise spanning web development, mobile applications, data analytics, and immersive technologies.</p>
+                    <p>Throughout our journey, we've remained committed to our core values of innovation, excellence, and client satisfaction. We believe in building long-term partnerships with our clients, understanding their unique challenges, and delivering solutions that exceed expectations.</p>
+                </div>
+                <div class="about-image">
+                    <div class="image-container parallax-element">
+                        <img src="https://i.pinimg.com/736x/4f/e8/85/4fe8850015aa939decf7e2e3526dbc4f.jpg" alt="NexusCorp Team">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vision & Mission -->
+    <section class="vision-mission">
+        <div class="container">
+            <div class="vm-grid">
+                <div class="vm-card vision">
+                    <div class="vm-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading innovator in digital solutions, empowering businesses to thrive in an ever-evolving technological landscape.</p>
+                </div>
+                <div class="vm-card mission">
+                    <div class="vm-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To deliver exceptional digital experiences that solve complex business challenges, drive growth, and create lasting value for our clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="values-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Core Values</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="values-grid">
+                <div class="value-card" data-aos="fade-up">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We constantly push boundaries and explore new technologies to create cutting-edge solutions.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="value-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Excellence</h3>
+                    <p>We are committed to delivering the highest quality in everything we do.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration</h3>
+                    <p>We believe in the power of teamwork and partnership with our clients.</p>
+                </div>
+                <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="value-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Agility</h3>
+                    <p>We adapt quickly to changes and evolve our approaches to stay ahead.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Team</h2>
+                <div class="underline"></div>
+                <p>Talented professionals dedicated to bringing your vision to life</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-member" data-aos="fade-up">
+                    <div class="member-image">
+                        <img src="https://i.pinimg.com/736x/3f/a6/e5/3fa6e5517b5ad38b39ff34cf01e2c10c.jpg" alt="Team Member">
+                        <div class="member-social">
+                            <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Alex Morgan</h3>
+                        <p>CEO & Founder</p>
+                    </div>
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                    <div class="member-image">
+                        <img src="https://i.pinimg.com/736x/b4/d2/5b/b4d25bc61bc04a1f0652cf61235edf43.jpg" alt="Team Member">
+                        <div class="member-social">
+                            <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Jessica Lee</h3>
+                        <p>Creative Director</p>
+                    </div>
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                    <div class="member-image">
+                        <img src="https://i.pinimg.com/736x/76/cb/d6/76cbd6349c11281988ea256d8be8500c.jpg" alt="Team Member">
+                        <div class="member-social">
+                            <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>David Chen</h3>
+                        <p>Lead Developer</p>
+                    </div>
+                </div>
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                    <div class="member-image">
+                        <img src="https://i.pinimg.com/736x/f0/0e/d4/f00ed4b5d04824172c3062623158d903.jpg" alt="Team Member">
+                        <div class="member-social">
+                            <a href="https://linkedin.com"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sophia Martinez</h3>
+                        <p>UX/UI Designer</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Journey</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2015</h3>
+                        <h4>The Beginning</h4>
+                        <p>NexusCorp was founded with a small team of 5 developers working from a shared office space.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2017</h3>
+                        <h4>Expansion</h4>
+                        <p>Expanded our services to include mobile development and opened our first dedicated office.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2019</h3>
+                        <h4>Innovation Hub</h4>
+                        <p>Launched our innovation lab focused on emerging technologies like AR/VR and AI.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2021</h3>
+                        <h4>Global Reach</h4>
+                        <p>Expanded our client base internationally and grew our team to over 50 professionals.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <h4>Industry Recognition</h4>
+                        <p>Received multiple industry awards for our innovative solutions and client success stories.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Today</h3>
+                        <h4>Continuing the Journey</h4>
+                        <p>Continuing to innovate and deliver exceptional digital experiences for our growing client base.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Work With Us?</h2>
+                <p>Let's discuss how our team can help bring your vision to life.</p>
+                <a href="contact.html" class="btn btn-light">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>NexusCorp</h3>
+                    <p>Innovative digital solutions for modern businesses. We help companies transform and thrive in the digital age.</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/NexusCorp"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/NexusCorp"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/nexuscorp"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/NexusCorp"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#web-dev">Web Development</a></li>
+                        <li><a href="services.html#mobile-dev">Mobile Development</a></li>
+                        <li><a href="services.html#data-analytics">Data Analytics</a></li>
+                        <li><a href="services.html#ar-vr">AR/VR Solutions</a></li>
+                        <li><a href="services.html#consulting">Digital Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Street, Tech City</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@nexuscorp.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NexusCorp. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Portfolio - NexusCorp</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.9.1/dist/gsap.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="	https://cdn-icons-png.flaticon.com/512/5968/5968374.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="cube">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+                <div class="side left"></div>
+                <div class="side right"></div>
+            </div>
+        </div>
+        <div class="loading-text">Loading<span class="dots">...</span></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">NexusCorp</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Portfolio</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Portfolio</span>
+            </div>
+        </div>
+        <div id="header-canvas"></div>
+    </section>
+
+    <!-- Portfolio Intro -->
+    <section class="portfolio-intro">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Work</h2>
+                <div class="underline"></div>
+                <p>Explore our diverse portfolio of successful projects across various industries. Each project represents our commitment to excellence and innovation.</p>
+            </div>
+            <div class="portfolio-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="ar-vr">AR/VR</button>
+                <button class="filter-btn" data-filter="data">Data</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Grid -->
+    <section class="portfolio-grid">
+        <div class="container">
+            <div class="portfolio-items">
+                <!-- Project 1 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://i.pinimg.com/736x/14/17/bc/1417bc192ed562b532d53bb9ca8c3c4d.jpg" alt="E-commerce Platform">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>E-commerce Platform</h3>
+                                <p>Web Development</p>
+                                <a href="#portfolio-modal-1" class="portfolio-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="https://i.pinimg.com/736x/2f/ce/a0/2fcea0649ade625a51d75eee6f9f788f.jpg" alt="Fitness App">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Fitness Tracking App</h3>
+                                <p>Mobile Development</p>
+                                <a href="#portfolio-modal-2" class="portfolio-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="portfolio-item" data-category="ar-vr">
+                    <div class="portfolio-image">
+                        <img src="https://i.pinimg.com/736x/cc/ea/7b/ccea7bb2ec1f254a86d01ecca545d559.jpg" alt="Virtual Showroom">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Virtual Showroom</h3>
+                                <p>AR/VR Development</p>
+                                <a href="#portfolio-modal-3" class="portfolio-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 4 -->
+                <div class="portfolio-item" data-category="data">
+                    <div class="portfolio-image">
+                        <img src="https://i.pinimg.com/736x/b7/18/fd/b718fd07c122721bb28ccca456b5f515.jpg" alt="Analytics Dashboard">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Analytics Dashboard</h3>
+                                <p>Data Visualization</p>
+                                <a href="#portfolio-modal-4" class="portfolio-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 5 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://i.pinimg.com/736x/fd/10/de/fd10de14dd03c1d93595e1c601059b29.jpg" alt="Corporate Website">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Corporate Website Redesign</h3>
+                                <p>Web Development</p>
+                                <a href="#portfolio-modal-5" class="portfolio-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 6 -->
+                <div class="portfolio-item" data-category="mobile">
+                    <div class="portfolio-image">
+                        <img src="https://i.pinimg.com/736x/ad/ef/16/adef1641c4b1edc5cb30571c9d6d3b39.jpg" alt="Food Delivery App">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Food Delivery App</h3>
+                                <p>Mobile Development</p>
+                                <a href="#portfolio-modal-6" class="portfolio-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 7 -->
+                <div class="portfolio-item" data-category="ar-vr">
+                    <div class="portfolio-image">
+                        <img src="https://i.pinimg.com/736x/cc/2c/3a/cc2c3a2b281f86a83578f125304d20e3.jpg" alt="AR Product Visualization">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>AR Product Visualization</h3>
+                                <p>AR Development</p>
+                                <a href="#portfolio-modal-7" class="portfolio-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 8 -->
+                <div class="portfolio-item" data-category="data">
+                    <div class="portfolio-image">
+                        <img src="https://i.pinimg.com/736x/01/7a/40/017a40bcf48b54e20badf69d8088511d.jpg" alt="Predictive Analytics">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Predictive Analytics Platform</h3>
+                                <p>Data Analytics</p>
+                                <a href="#portfolio-modal-8" class="portfolio-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 9 -->
+                <div class="portfolio-item" data-category="web">
+                    <div class="portfolio-image">
+                        <img src="https://i.pinimg.com/736x/a0/bd/c1/a0bdc14d89f919d739931f23cc44b1a7.jpg" alt="Educational Platform">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Educational Platform</h3>
+                                <p>Web Development</p>
+                                <a href="#portfolio-modal-9" class="portfolio-link">View Details</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Modals -->
+    <div class="portfolio-modals">
+        <!-- Modal 1 -->
+        <div id="portfolio-modal-1" class="portfolio-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>E-commerce Platform</h2>
+                    <span class="modal-close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img src="https://i.pinimg.com/736x/a0/bd/c1/a0bdc14d89f919d739931f23cc44b1a7.jpg" alt="E-commerce Platform">
+                    </div>
+                    <div class="modal-details">
+                        <div class="modal-info">
+                            <h3>Project Information</h3>
+                            <ul>
+                                <li><strong>Client:</strong> GlobalRetail Inc.</li>
+                                <li><strong>Category:</strong> Web Development</li>
+                                <li><strong>Date:</strong> January 2023</li>
+                                <li><strong>Technologies:</strong> React, Node.js, MongoDB, AWS</li>
+                            </ul>
+                        </div>
+                        <div class="modal-description">
+                            <h3>Project Description</h3>
+                            <p>GlobalRetail Inc. needed a modern e-commerce platform to expand their online presence and streamline their sales process. We developed a custom solution that integrated with their existing inventory management system and provided a seamless shopping experience for their customers.</p>
+                            <p>The platform features a responsive design, advanced search functionality, personalized product recommendations, secure payment processing, and a comprehensive admin dashboard for managing products, orders, and customer data.</p>
+                        </div>
+                        <div class="modal-results">
+                            <h3>Results</h3>
+                            <ul>
+                                <li>40% increase in online sales within the first 3 months</li>
+                                <li>25% reduction in cart abandonment rate</li>
+                                <li>Improved inventory management efficiency by 30%</li>
+                                <li>Enhanced customer satisfaction with a 4.8/5 rating</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2 -->
+        <div id="portfolio-modal-2" class="portfolio-modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2>Fitness Tracking App</h2>
+                    <span class="modal-close">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-image">
+                        <img src="assets/images/portfolio-2-full.jpg" alt="Fitness App">
+                    </div>
+                    <div class="modal-details">
+                        <div class="modal-info">
+                            <h3>Project Information</h3>
+                            <ul>
+                                <li><strong>Client:</strong> FitLife</li>
+                                <li><strong>Category:</strong> Mobile Development</li>
+                                <li><strong>Date:</strong> March 2023</li>
+                                <li><strong>Technologies:</strong> React Native, Firebase, HealthKit, Google Fit</li>
+                            </ul>
+                        </div>
+                        <div class="modal-description">
+                            <h3>Project Description</h3>
+                            <p>FitLife wanted to create a comprehensive fitness tracking app that would help users monitor their workouts, nutrition, and overall health. We developed a cross-platform mobile application that integrates with wearable devices and provides personalized fitness plans and nutrition advice.</p>
+                            <p>The app features workout tracking, meal planning, progress visualization, social sharing, and AI-powered coaching to keep users motivated and engaged.</p>
+                        </div>
+                        <div class="modal-results">
+                            <h3>Results</h3>
+                            <ul>
+                                <li>Over 500,000 downloads in the first 6 months</li>
+                                <li>Average user engagement of 4.5 sessions per week</li>
+                                <li>85% user retention rate after 3 months</li>
+                                <li>Featured in the App Store's "Apps We Love" section</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional modals would follow the same pattern -->
+    </div>
+
+    <!-- Case Studies Section -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Case Studies</h2>
+                <div class="underline"></div>
+                <p>Dive deeper into some of our most impactful projects</p>
+            </div>
+            <div class="case-study-grid">
+                <div class="case-study" data-aos="fade-up">
+                    <div class="case-study-image">
+                        <img src="https://i.pinimg.com/736x/a0/bd/c1/a0bdc14d89f919d739931f23cc44b1a7.jpg" alt="Case Study">
+                    </div>
+                    <div class="case-study-content">
+                        <span class="case-category">E-commerce</span>
+                        <h3>Transforming Online Retail for GlobalRetail Inc.</h3>
+                        <p>How we helped a traditional retailer increase online sales by 40% with a custom e-commerce solution.</p>
+                        <a href="#" class="btn btn-outline">Read Case Study</a>
+                    </div>
+                </div>
+                <div class="case-study" data-aos="fade-up" data-aos-delay="100">
+                    <div class="case-study-image">
+                        <img src="https://i.pinimg.com/736x/3d/26/e7/3d26e7df319d689a1c30b2d96b04857b.jpg" alt="Case Study">
+                    </div>
+                    <div class="case-study-content">
+                        <span class="case-category">AR/VR</span>
+                        <h3>Virtual Showroom Revolution for AutoLux</h3>
+                        <p>Creating an immersive virtual showroom experience that increased customer engagement by 60%.</p>
+                        <a href="#" class="btn btn-outline">Read Case Study</a>
+                    </div>
+                </div>
+                <div class="case-study" data-aos="fade-up" data-aos-delay="200">
+                    <div class="case-study-image">
+                        <img src="https://i.pinimg.com/736x/5f/83/45/5f8345a47e59fb9ddc434f7690ca6844.jpg" alt="Case Study">
+                    </div>
+                    <div class="case-study-content">
+                        <span class="case-category">Data Analytics</span>
+                        <h3>Data-Driven Decision Making for FinTech Leader</h3>
+                        <p>How our predictive analytics platform helped a financial services company reduce operational costs by 25%.</p>
+                        <a href="#" class="btn btn-outline">Read Case Study</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Clients</h2>
+                <div class="underline"></div>
+                <p>We've had the privilege of working with amazing companies across various industries</p>
+            </div>
+            <div class="clients-grid">
+                <div class="client-logo" data-aos="fade-up">
+                    <img src="	https://cdn-icons-png.flaticon.com/512/5968/5968863.png" alt="Client Logo">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="100">
+                    <img src="   https://cdn-icons-png.flaticon.com/512/6124/6124998.png " alt="Client Logo">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="200">
+                    <img src="   https://cdn-icons-png.flaticon.com/512/6033/6033716.png " alt="Client Logo">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="300">
+                    <img src="     https://cdn-icons-png.flaticon.com/512/732/732221.png  " alt="Client Logo">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="400">
+                    <img src="     https://cdn-icons-png.flaticon.com/512/882/882745.png " alt="Client Logo">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="500">
+                    <img src="   https://cdn-icons-png.flaticon.com/512/14079/14079391.png " alt="Client Logo">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="600">
+                    <img src="   https://cdn-icons-png.flaticon.com/512/3536/3536505.png " alt="Client Logo">
+                </div>
+                <div class="client-logo" data-aos="fade-up" data-aos-delay="700">
+                    <img src="   https://cdn-icons-png.flaticon.com/512/16183/16183582.png " alt="Client Logo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Create Something Amazing?</h2>
+                <p>Let's discuss how we can help bring your vision to life.</p>
+                <a href="contact.html" class="btn btn-light">Start a Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>NexusCorp</h3>
+                    <p>Innovative digital solutions for modern businesses. We help companies transform and thrive in the digital age.</p>
+                    <div class="social-icons">
+                      <a href="https://www.facebook.com/NexusCorp"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/NexusCorp"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/nexuscorp"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/NexusCorp"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#web-dev">Web Development</a></li>
+                        <li><a href="services.html#mobile-dev">Mobile Development</a></li>
+                        <li><a href="services.html#data-analytics">Data Analytics</a></li>
+                        <li><a href="services.html#ar-vr">AR/VR Solutions</a></li>
+                        <li><a href="services.html#consulting">Digital Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Street, Tech City</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@nexuscorp.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NexusCorp. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

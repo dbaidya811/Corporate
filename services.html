@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - NexusCorp</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.9.1/dist/gsap.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="	https://cdn-icons-png.flaticon.com/512/5968/5968374.png">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="cube">
+                <div class="side front"></div>
+                <div class="side back"></div>
+                <div class="side top"></div>
+                <div class="side bottom"></div>
+                <div class="side left"></div>
+                <div class="side right"></div>
+            </div>
+        </div>
+        <div class="loading-text">Loading<span class="dots">...</span></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">NexusCorp</a>
+            </div>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Services</h1>
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / <span>Services</span>
+            </div>
+        </div>
+        <div id="header-canvas"></div>
+    </section>
+
+    <!-- Services Intro -->
+    <section class="services-intro">
+        <div class="container">
+            <div class="section-header">
+                <h2>What We Do</h2>
+                <div class="underline"></div>
+                <p>We offer comprehensive digital solutions tailored to your business needs. Our team of experts combines technical expertise with creative thinking to deliver exceptional results.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Services -->
+    <section id="web-dev" class="service-section">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-image" data-aos="fade-right">
+                    <div class="image-container parallax-element">
+                        <img src="https://i.pinimg.com/736x/5c/0b/41/5c0b418d5a1f67b28ed12bea3eafb95a.jpg" alt="Web Development">
+                    </div>
+                </div>
+                <div class="service-content" data-aos="fade-left">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>We create custom, responsive websites and web applications that deliver exceptional user experiences across all devices.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Custom Website Design</li>
+                        <li><i class="fas fa-check-circle"></i> E-commerce Solutions</li>
+                        <li><i class="fas fa-check-circle"></i> Content Management Systems</li>
+                        <li><i class="fas fa-check-circle"></i> Progressive Web Apps</li>
+                        <li><i class="fas fa-check-circle"></i> API Development & Integration</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span>Technologies:</span>
+                        <div class="tech-icons">
+                            <i class="fab fa-html5" title="HTML5"></i>
+                            <i class="fab fa-css3-alt" title="CSS3"></i>
+                            <i class="fab fa-js" title="JavaScript"></i>
+                            <i class="fab fa-react" title="React"></i>
+                            <i class="fab fa-angular" title="Angular"></i>
+                            <i class="fab fa-node-js" title="Node.js"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mobile-dev" class="service-section alt-bg">
+        <div class="container">
+            <div class="service-grid reverse">
+                <div class="service-content" data-aos="fade-right">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile Development</h3>
+                    <p>We build native and cross-platform mobile applications that provide seamless experiences on iOS and Android devices.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Native iOS & Android Apps</li>
+                        <li><i class="fas fa-check-circle"></i> Cross-Platform Solutions</li>
+                        <li><i class="fas fa-check-circle"></i> Mobile UI/UX Design</li>
+                        <li><i class="fas fa-check-circle"></i> App Store Optimization</li>
+                        <li><i class="fas fa-check-circle"></i> App Maintenance & Updates</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span>Technologies:</span>
+                        <div class="tech-icons">
+                            <i class="fab fa-swift" title="Swift"></i>
+                            <i class="fab fa-android" title="Android"></i>
+                            <i class="fab fa-react" title="React Native"></i>
+                            <i class="fab fa-flutter" title="Flutter"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-image" data-aos="fade-left">
+                    <div class="image-container parallax-element">
+                        <img src="https://i.pinimg.com/736x/ed/f5/dc/edf5dc1a8c7711e8419b199682b4df3d.jpg" alt="Mobile Development">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="data-analytics" class="service-section">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-image" data-aos="fade-right">
+                    <div class="image-container parallax-element">
+                        <img src="https://i.pinimg.com/736x/49/40/6f/49406f1fb7bf3769cb322f3ba2692732.jpg" alt="Data Analytics">
+                    </div>
+                </div>
+                <div class="service-content" data-aos="fade-left">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Analytics</h3>
+                    <p>We help businesses harness the power of their data through advanced analytics solutions that provide actionable insights.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Business Intelligence</li>
+                        <li><i class="fas fa-check-circle"></i> Data Visualization</li>
+                        <li><i class="fas fa-check-circle"></i> Predictive Analytics</li>
+                        <li><i class="fas fa-check-circle"></i> Custom Dashboards</li>
+                        <li><i class="fas fa-check-circle"></i> Big Data Solutions</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span>Technologies:</span>
+                        <div class="tech-icons">
+                            <i class="fab fa-python" title="Python"></i>
+                            <i class="fas fa-database" title="SQL"></i>
+                            <i class="fab fa-aws" title="AWS"></i>
+                            <i class="fab fa-microsoft" title="Power BI"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ar-vr" class="service-section alt-bg">
+        <div class="container">
+            <div class="service-grid reverse">
+                <div class="service-content" data-aos="fade-right">
+                    <div class="service-icon">
+                        <i class="fas fa-vr-cardboard"></i>
+                    </div>
+                    <h3>AR/VR Solutions</h3>
+                    <p>We create immersive augmented and virtual reality experiences that transform how businesses engage with their customers.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> AR Product Visualization</li>
+                        <li><i class="fas fa-check-circle"></i> VR Training Simulations</li>
+                        <li><i class="fas fa-check-circle"></i> Interactive 3D Experiences</li>
+                        <li><i class="fas fa-check-circle"></i> AR Mobile Applications</li>
+                        <li><i class="fas fa-check-circle"></i> VR Marketing Experiences</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span>Technologies:</span>
+                        <div class="tech-icons">
+                            <i class="fab fa-unity" title="Unity"></i>
+                            <i class="fab fa-apple" title="ARKit"></i>
+                            <i class="fab fa-android" title="ARCore"></i>
+                            <i class="fab fa-windows" title="HoloLens"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="service-image" data-aos="fade-left">
+                    <div class="image-container parallax-element">
+                        <img src="https://i.pinimg.com/736x/8f/a3/29/8fa32970964e1c7a65c3c5f4bcd58c93.jpg" alt="AR/VR Solutions">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="consulting" class="service-section">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-image" data-aos="fade-right">
+                    <div class="image-container parallax-element">
+                        <img src="https://i.pinimg.com/736x/aa/ab/9a/aaab9a62cb234122882adf4a540fca72.jpg" alt="Digital Consulting">
+                    </div>
+                </div>
+                <div class="service-content" data-aos="fade-left">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Digital Consulting</h3>
+                    <p>We provide strategic guidance to help businesses navigate the digital landscape and identify opportunities for growth and innovation.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Digital Transformation</li>
+                        <li><i class="fas fa-check-circle"></i> Technology Strategy</li>
+                        <li><i class="fas fa-check-circle"></i> UX/UI Consulting</li>
+                        <li><i class="fas fa-check-circle"></i> Product Strategy</li>
+                        <li><i class="fas fa-check-circle"></i> Innovation Workshops</li>
+                    </ul>
+                    <div class="service-tech">
+                        <span>Methodologies:</span>
+                        <div class="tech-text">
+                            Design Thinking, Agile, Lean UX, Jobs-to-be-Done
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Process</h2>
+                <div class="underline"></div>
+                <p>We follow a structured approach to ensure successful project delivery</p>
+            </div>
+            <div class="process-grid">
+                <div class="process-step" data-aos="fade-up">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Discovery</h3>
+                        <p>We begin by understanding your business, goals, and requirements through in-depth consultations.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>Strategy</h3>
+                        <p>We develop a comprehensive strategy and roadmap tailored to your specific needs and objectives.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Design</h3>
+                        <p>Our designers create intuitive, engaging user experiences that align with your brand identity.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Development</h3>
+                        <p>Our development team brings the designs to life using the latest technologies and best practices.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                    <div class="step-number">05</div>
+                    <div class="step-content">
+                        <h3>Testing</h3>
+                        <p>We conduct thorough testing to ensure quality, performance, and compatibility across all platforms.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="500">
+                    <div class="step-number">06</div>
+                    <div class="step-content">
+                        <h3>Launch</h3>
+                        <p>We manage the deployment process to ensure a smooth and successful launch.</p>
+                    </div>
+                </div>
+                <div class="process-step" data-aos="fade-up" data-aos-delay="600">
+                    <div class="step-number">07</div>
+                    <div class="step-content">
+                        <h3>Support</h3>
+                        <p>We provide ongoing support and maintenance to keep your solution running optimally.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Frequently Asked Questions</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item" data-aos="fade-up">
+                    <div class="faq-question">
+                        <h3>How long does a typical project take?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Project timelines vary depending on scope and complexity. A simple website might take 4-6 weeks, while a complex web application could take 3-6 months. During our initial consultation, we'll provide a detailed timeline based on your specific requirements.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="faq-question">
+                        <h3>What is your pricing structure?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer flexible pricing models including fixed-price projects, time and materials, and retainer arrangements. The right model depends on your project's nature and requirements. We'll discuss options during our consultation to find the best fit for your needs and budget.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="faq-question">
+                        <h3>Do you provide ongoing support after launch?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we offer various support and maintenance packages to ensure your solution continues to perform optimally after launch. These can include regular updates, performance monitoring, security patches, and technical support.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="faq-question">
+                        <h3>How do you handle project communication?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We believe in transparent, regular communication. Each project is assigned a dedicated project manager who serves as your main point of contact. We use collaborative tools for project management and conduct regular progress meetings to keep you informed every step of the way.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="faq-question">
+                        <h3>Can you work with our existing systems and technologies?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, we have experience integrating with a wide range of existing systems and technologies. During the discovery phase, we'll assess your current infrastructure and determine the best approach for seamless integration.</p>
+                    </div>
+                </div>
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="faq-question">
+                        <h3>Do you offer training for our team?</h3>
+                        <div class="faq-toggle"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. We provide comprehensive training to ensure your team can effectively use and manage the solutions we develop. This can include documentation, hands-on sessions, and video tutorials tailored to your team's needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Start Your Project?</h2>
+                <p>Contact us today to discuss how we can help bring your vision to life.</p>
+                <a href="contact.html" class="btn btn-light">Get a Free Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>NexusCorp</h3>
+                    <p>Innovative digital solutions for modern businesses. We help companies transform and thrive in the digital age.</p>
+                    <div class="social-icons">
+                      <a href="https://www.facebook.com/NexusCorp"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/NexusCorp"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.linkedin.com/company/nexuscorp"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/NexusCorp"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="services.html#web-dev">Web Development</a></li>
+                        <li><a href="services.html#mobile-dev">Mobile Development</a></li>
+                        <li><a href="services.html#data-analytics">Data Analytics</a></li>
+                        <li><a href="services.html#ar-vr">AR/VR Solutions</a></li>
+                        <li><a href="services.html#consulting">Digital Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Innovation Street, Tech City</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                        <li><i class="fas fa-envelope"></i> info@nexuscorp.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NexusCorp. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
